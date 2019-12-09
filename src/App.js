@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GithubUserInfo username="Elie"/>
+        <GithubUserInfo username="mclov" />
       </div>
     );
   }
