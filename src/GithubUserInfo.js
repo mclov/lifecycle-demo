@@ -9,7 +9,7 @@ class GithubUserInfo extends Component {
     };
   }
   //async version
-  async componentDidMount() {
+  async componentDidUpdate() {
     const url = `https://api.github.com/users/${this.props.username}`;
     let response = await axios.get(url);
     let user = response.data;
@@ -28,7 +28,7 @@ class GithubUserInfo extends Component {
       <div>
         <h1>{this.state.user.name}</h1>
         <p>{this.state.user.bio}</p>
-        <img src={this.state.user.avatar_url} />
+        <img src={this.state.user.avatar_url} alt={this.state.user.name} />
       </div>
     );
   }

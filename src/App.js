@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
 import GithubUserInfo from './GithubUserInfo';
-import logo from './logo.svg';
+import Form from './Form';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { username: '' }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(newUsername) {
+    this.setState(newUsername);
+  }
+
   render() {
     return (
       <div className="App">
-        <GithubUserInfo username="mclov" />
+        <Form updateUser={this.handleSubmit} />
+        <GithubUserInfo username={this.state.username} />
       </div>
     );
   }
