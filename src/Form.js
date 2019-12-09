@@ -24,7 +24,7 @@ export class Form extends Component {
       <form className='Form' onSubmit={this.handleSubmit} >
         <input
           type='text'
-          placeholder='github user'
+          placeholder='username'
           name='username'
           value={this.state.username}
           onChange={this.handleChange}

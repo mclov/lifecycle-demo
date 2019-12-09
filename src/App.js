@@ -17,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Github App Demo</h1>
         <Form updateUser={this.handleSubmit} />
         <GithubUserInfo username={this.state.username} />
       </div>
